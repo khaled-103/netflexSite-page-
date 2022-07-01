@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:'Times New Roman', Times, serif;
+    background-color: black;
+    color: #aaa;
+}
+a{
+    text-decoration: none;
+    color: #aaa;
+}
+.topSide{
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 1px 0;
+    height: 93vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.topSide::after{
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: inset 120px 120px 120px black,inset -120px -120px 120px black;
+}
+
+
+
+.topSideHeader{
+    position: relative;
+    z-index: 2;
+}
+.topSideHeader button{
+    background-color: red;
+}
+.img-container{
+    text-align: center;
+}
+
+@media screen and (max-width:800px){
+    .img-container{
+        text-align: left;
+    }      
+}
+.img-container img{
+    width: 170px;
+}
+.topSideContent{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+#btnBgRed{
+    background-color: red;
+}
+
+/* .firstTagsText button{
+    background-color: red;
+}
+.topSideContent button{
+    background-color: red;
+} */
+.topSideContent h1{
+    font-weight: 700;
+}
+.hoveropacity:hover{
+    opacity: .7;
+}
+
+
+.tabsIcon{
+    background-color: #222;
+    padding-left: 20%;
+}
+.pointer{
+    cursor: pointer;
+}
+.iconItem{
+    position: relative;
+}
+.iconItem:hover{
+    color: white;
+}
+
+.bottomline{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: red;
+    position: absolute;
+    left: -2px;
+    bottom: -15px;
+}
+
+.footerFixed{
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    border-top: 1px solid white;
+}
